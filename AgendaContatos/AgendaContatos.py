@@ -11,16 +11,18 @@ class Agenda():
         self.agenda = []
         self.contacts = {}
 
-    def insert_contacts(self):
-        contacts[0] = name
-        contacts[1] = age
-        contacts[2] = phone
-        contacts[3] = email
-        agenda.append(contacts)
-        return self.agenda
+    def dicionario(self, contacts):
+        contacts['name'] = self.name
+        contacts['age'] = self.age
+        contacts['phone'] = self.phone
+        contacts['email'] = self.email
+        
+    def selfagenda(self, agenda):
+       self.agenda.append(contacts)
+       return self.agenda
 
-    #def sort_agenda(self):
-        #agenda.sort([name for name in agenda])
+    
+dados = Agenda("marcelo", "37", 54654654654, "a@a.com.br")
 
-print(Agenda("marcelo", "37", 54654654654, "a@a.com.br"))
+print(dados)
 
