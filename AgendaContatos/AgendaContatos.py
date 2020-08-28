@@ -18,12 +18,11 @@ class Agenda():
         contacts['email'] = self.email
         
     def selfagenda(self, dicionario):
-       self.agenda.append(contacts)
-       return self.agenda
+        self.agenda.append(contacts)       
 
     def __str__(selfagenda):
-       print(self.agenda)
+        return self.agenda
 
     
-Agenda.selfagenda("marcelo", "37", 54654654654, "a@a.com.br")
+print(Agenda(name("marcelo"), age("37"), phone(54654654654), email("a@a.com.br")))
 
