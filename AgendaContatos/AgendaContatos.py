@@ -11,11 +11,11 @@ class Agenda():
         self.agenda = []
         self.contacts = {}
 
-    def dicionario(self, contacts):
-        contacts['name'] = self.name
-        contacts['age'] = self.age
-        contacts['phone'] = self.phone
-        contacts['email'] = self.email
+    def dicionario(self):
+        self.contacts['name'] = self.name
+        self.contacts['age'] = self.age
+        self.contacts['phone'] = self.phone
+        self.contacts['email'] = self.email
         self.agenda.append(contacts)  
         
     #def selfagenda(self):
