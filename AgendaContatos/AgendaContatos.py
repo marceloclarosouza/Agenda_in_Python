@@ -18,13 +18,9 @@ class Agenda():
         self.contacts['email'] = self.email
         self.agenda.append(contacts)  
         
-    #def selfagenda(self):
-        #self.agenda.append(contacts)       
-
     def __str__(agenda):
         return self.agenda
 
     
 data = Agenda("marcelo", "37", 54654654654, "a@a.com.br")
-print(data())
-
+print(f'Contatos: {agenda}')
