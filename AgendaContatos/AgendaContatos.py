@@ -13,10 +13,10 @@ class Agenda():
         self.agenda.append(self.contacts)
 
     def __str__(self):
-        print(self.agenda)
-
+        return self.agenda
 
 data = Agenda()
-data.dicionario("mcs", 2131, "hlkhlh", "kljlkjl")
+print(data.dicionario("mcs", 2131, "hlkhlh", "kljlkjl"))
+
 
 
