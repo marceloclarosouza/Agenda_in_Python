@@ -20,7 +20,16 @@ class Agenda():
         #print(agenda)
 
 data = Agenda()
-print(data.dicionario("mcs", "2131", "hlkhlh", "kljlkjl"))
+while = True
+    data.dicionario(input(), input(), input(), input())
+    data = print('Deseja adicionar outro contato? S ou N', input())
+        if data == S:
+            return True
+        else:
+            return False
+        
+        
+    
 
 
 
