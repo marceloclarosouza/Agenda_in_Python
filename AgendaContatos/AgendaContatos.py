@@ -6,12 +6,15 @@ class Agenda():
         self.agenda=[]
 
     def dicionario(self, name, age, phone, email):
-        self.contacts["name"] = name
-        self.contacts["age"] = age
-        self.contacts["phone"] = phone
-        self.contacts["email"] = email
-        self.agenda.append(self.contacts)
-        return self.agenda
+        if name not in self.contacts:
+            self.contacts["name"] = name
+            self.contacts["age"] = age
+            self.contacts["phone"] = phone
+            self.contacts["email"] = email
+            self.agenda.append(self.contacts)
+            return self.agenda
+        else:
+            print("Este contato já foi cadastrado no sistema")
 
     #def __str__(self, agenda):
         #print(agenda)
