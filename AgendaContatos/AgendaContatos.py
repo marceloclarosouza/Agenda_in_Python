@@ -1,11 +1,13 @@
 """Agenda de contatos usando OOP. Quero armazenar os contatos em uma lista de dicionarios"""
 
+import json
+
 class Agenda():
     def __init__(self):
         self.contacts={}
         self.agenda=[]
 
-    def dicionario(self, name, age, phone, email):
+    def dicionario(self, name, age="None", phone="None", email="None"):
         if name not in self.contacts:
             self.contacts["name"] = name
             self.contacts["age"] = age
@@ -15,16 +17,15 @@ class Agenda():
         else:
             print("Este contato já foi cadastrado no sistema")
 
-    #def retorna_agenda(self):
-        #return self.agenda
-    
     def salva_agenda(self):
-        with open("agenda_dados.txt", "a") as arquivo:
-            arquivo.write(self.agenda)
-            return arquivo
-        
+        with open("agenda_dados.txt", "w") as arquivo:
+            arquivo.write(json.dumps(self.agenda))
 
-   
+    def retorna_agenda(self):
+        with open("agenda_dados.txt", "r") as arquivo:
+            aberto = json.loads(arquivo.read())
+            return aberto
+
 
 data = Agenda()
 
@@ -32,7 +33,6 @@ data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email:
 data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email: "))
 data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email: "))
 
-#print(data.retorna_agenda())
-print(data.salva_agenda())
+print(data.retorna_agenda())
 
 
