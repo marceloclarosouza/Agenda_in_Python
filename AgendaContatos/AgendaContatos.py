@@ -14,15 +14,20 @@ class Agenda():
             self.agenda.append(self.contacts)
         else:
             print("Este contato já foi cadastrado no sistema")
-         
+
+    def retorna_agenda(self):
+        return self.agenda
+
     #def __str__(self, agenda):
         #print(agenda)
 
 data = Agenda()
 insere = True
 while insere == True:
-    data.dicionario(input("Nome"), input("age"), input("phone"), input("email"))
+    data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email: "))
     retorno = print("Deseja adicionar outro contato? S/N", input())
     insere = (True if retorno == "S" else False)
+
+print(data.retorna_agenda())
 
 
