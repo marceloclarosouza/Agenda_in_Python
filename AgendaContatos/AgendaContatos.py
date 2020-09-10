@@ -15,16 +15,24 @@ class Agenda():
         else:
             print("Este contato já foi cadastrado no sistema")
 
-    def retorna_agenda(self):
-        return self.agenda
+    #def retorna_agenda(self):
+        #return self.agenda
+    
+    def salva_agenda(self):
+        with open("agenda_dados.txt", "a") as arquivo:
+            arquivo.write(self.agenda)
+            return arquivo
+        
 
    
 
 data = Agenda()
+
 data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email: "))
 data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email: "))
 data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email: "))
 
-print(data.retorna_agenda())
+#print(data.retorna_agenda())
+print(data.salva_agenda())
 
 
