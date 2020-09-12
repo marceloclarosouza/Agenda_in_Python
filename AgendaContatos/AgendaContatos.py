@@ -13,32 +13,26 @@ class Agenda():
             self.contacts["age"] = age
             self.contacts["phone"] = phone
             self.contacts["email"] = email
-            #self.agenda.append(self.contacts)
-        else:
-            print("Este contato já foi cadastrado no sistema")
-            
-            
-    def salvar(self):
+            self.agenda.append(self.contacts)
             with open("agenda_dados.txt", "a") as arquivo:
-                #arquivo.write(json.dumps(self.agenda))
-                arquivo.write(json.dumps(self.contacts))
-                
-  
+                arquivo.write(json.dumps(self.agenda))
+        else:
+            #print("Este contato já foi cadastrado no sistema")
+
+
+    #def salva_retorna_agenda(self):
+        #with open("agenda_dados.txt", "w") as arquivo:
+            #arquivo.write(json.dumps(self.agenda))
     def retorna_agenda(self):
         with open("agenda_dados.txt", "r") as arquivo:
             aberto = arquivo.read()
-            for dic in aberto:
-                self.agenda.append(dic)
-            data.salvar(self.agenda)    
-            return self.agenda
+            return aberto
    
 
 data = Agenda()
 
 data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email: "))
-data.salvar()
 data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email: "))
-data.salvar()
 #data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email: "))
 
 print(data.retorna_agenda())
