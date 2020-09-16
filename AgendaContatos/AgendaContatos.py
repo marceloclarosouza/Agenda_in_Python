@@ -6,7 +6,7 @@ class Agenda():
     def __init__(self):
         """Inicia a lista e o dicionário utilizados na classe Agenda"""
         self.contacts={}
-        self.agenda=[]
+        #self.agenda=[]
 
     def criar_agenda(self):
         """Cria a agenda de contatos"""#deve ser executada uma única vez
@@ -21,13 +21,9 @@ class Agenda():
         self.contacts["age"] = age
         self.contacts["phone"] = phone
         self.contacts["email"] = email
-        self.agenda.append(self.contacts)
-        return self.agenda
-    
-    def salvar_agenda(self):
         with open("agenda_dados.txt", "a") as arquivo:
-            arquivo.write(json.dumps(self.agenda))
-            
+            arquivo.write(json.dumps(self.contacts))
+
 
     def retorna_agenda(self):
         """retorna a aganda"""
@@ -39,10 +35,7 @@ class Agenda():
 data = Agenda()
 data.criar_agenda()
 
-data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email: "))
-data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email: "))
-data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email: "))
-
-data.salvar_agenda()
+for i in range (5):
+    data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email: "))
 
 print(data.retorna_agenda())
