@@ -1,1 +1,0 @@
-{"name": "Marcelo", "age": "37", "phone": "11235689", "email": "a@a.com.br"}{"name": "Lucas", "age": "22", "phone": "2356893", "email": "b@a.com.br"}{"name": "Kiron", "age": "23", "phone": "3236521", "email": "c@a.com.br"}
