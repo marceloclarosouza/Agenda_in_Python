@@ -16,16 +16,14 @@ class Agenda():
 
     def dicionario(self, name, age="None", phone="None", email="None"):
         """Adiciona os contatos a agenda"""
-        if name not in self.contacts.keys():
-            self.contacts["name"] = name
-            self.contacts["age"] = age
-            self.contacts["phone"] = phone
-            self.contacts["email"] = email
-            self.agenda.append(self.contacts)
-            with open("agenda_dados.txt", "a") as arquivo:
-                arquivo.write(json.dumps(self.agenda))
-        else:
-            print("Este contato já foi cadastrado no sistema")
+        self.contacts["name"] = name
+        self.contacts["age"] = age
+        self.contacts["phone"] = phone
+        self.contacts["email"] = email
+        self.agenda.append(self.contacts)
+        with open("agenda_dados.txt", "a") as arquivo:
+            arquivo.write(json.dumps(self.agenda))
+       
 
     def retorna_agenda(self):
         with open("agenda_dados.txt", "r") as arquivo:
