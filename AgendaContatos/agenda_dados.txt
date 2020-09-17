@@ -1,0 +1,1 @@
+{"name": "marcelo", "age": "37", "phone": "123456", "email": "a@a.com.br"}{"name": "luffy", "age": "2", "phone": "123456", "email": "b@a.com.br"}{"name": "lucas", "age": "3", "phone": "987654", "email": "c@2.com.br"}

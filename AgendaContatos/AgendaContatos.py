@@ -26,14 +26,14 @@ class Agenda():
         """retorna a aganda"""
         with open("agenda_dados.txt", "r") as arquivo:
             aberto = arquivo.read()
-            self.agenda.append(aberto)
+            self.agenda.append(aberto)#salva os dicionarios em uma lista iterável
             return self.agenda
 
 
 
 
 data = Agenda()
-data.criar_agenda()
+data.criar_agenda()#deve ser executado uma única vez
 
 for i in range (3):
     data.dicionario(input("Nome: "), input("age: "), input("phone: "), input("email: "))
